@@ -1,0 +1,27 @@
+{
+  "name": "node-etcd-promise",
+  "version": "1.0.0",
+  "description": "node-etcd promiselized wrapper",
+  "main": "index.js",
+  "scripts": {
+    "build": "node_modules/.bin/coffee --bare --compile index.coffee",
+    "prepublish": "node_modules/.bin/coffee --bare --compile index.coffee"
+  },
+  "author": "bearice",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:bearice/node-etcd-promise"
+  },
+  "bugs": {
+    "url": "https://github.com/bearice/node-etcd-promise/issues"
+  },
+  "homepage": "https://github.com/bearice/node-etcd-promise",
+  "dependencies": {
+    "node-etcd": "~4.0.2",
+    "promise": "~7.0.1"
+  },
+  "devDependencies": {
+    "coffee-script": "~1.9.1"
+  }
+}
