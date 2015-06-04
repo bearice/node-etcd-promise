@@ -44,4 +44,4 @@ class EtcdPromise
   _proxy: (name,args) ->
     @etcd[name].apply(@etcd,args)
 
-module.export = EtcdPromise
+module.exports = EtcdPromise
