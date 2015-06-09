@@ -33,9 +33,9 @@ class EtcdPromise
     args = Array.prototype.slice.call args
     console.info name,args if process.env.DEBUG_ETCD
     new Promise (accept,reject)=>
-      args.push (err,resp,body)->
+      args.push (err,body,headers)->
         return reject(err) if err
-        return accept({resp: resp, body: body})
+        return accept({body: body, headers: headers})
       @etcd[name].apply(@etcd,args)
 
   watcher: => @_proxy('watcher',arguments)
