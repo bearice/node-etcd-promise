@@ -1,6 +1,6 @@
 {
   "name": "node-etcd-promise",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "node-etcd promiselized wrapper",
   "main": "index.js",
   "scripts": {
