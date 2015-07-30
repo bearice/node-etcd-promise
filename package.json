@@ -1,6 +1,6 @@
 {
   "name": "node-etcd-promise",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "node-etcd promiselized wrapper",
   "main": "index.js",
   "scripts": {
@@ -18,7 +18,7 @@
   },
   "homepage": "https://github.com/bearice/node-etcd-promise",
   "dependencies": {
-    "node-etcd": "~4.0.2",
+    "node-etcd": "~4.1.0",
     "promise": "~7.0.1"
   },
   "devDependencies": {
