@@ -32,7 +32,7 @@ class EtcdPromise
 
   _mkPromise: (name,args) ->
     args = Array.prototype.slice.call args
-    debug "%s" name, args
+    debug "%s",name, args
     new Promise (accept,reject)=>
       args.push (err,body,headers)->
         return reject(err) if err
