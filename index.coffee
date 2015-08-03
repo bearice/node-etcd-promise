@@ -1,5 +1,6 @@
 Etcd = require 'node-etcd'
 Promise = require 'promise'
+debug = (require 'util').debuglog('etcd')
 
 class EtcdPromise
   constructor: ->
@@ -31,7 +32,7 @@ class EtcdPromise
 
   _mkPromise: (name,args) ->
     args = Array.prototype.slice.call args
-    console.info name,args if process.env.DEBUG_ETCD
+    debug "%s" name, args
     new Promise (accept,reject)=>
       args.push (err,body,headers)->
         return reject(err) if err
