@@ -35,8 +35,11 @@ class EtcdPromise
     debug "%s",name, args
     new Promise (accept,reject)=>
       args.push (err,body,headers)->
-        return reject(err) if err
-        return accept({body: body, headers: headers})
+        if err
+          err.headers = headers
+          reject err
+        else
+          accept {body, headers}
       @etcd[name].apply(@etcd,args)
 
   watcher: => @_proxy('watcher',arguments)
