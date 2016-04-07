@@ -1,5 +1,4 @@
 Etcd = require 'node-etcd'
-Promise = require 'promise'
 debug = (require 'util').debuglog('etcd')
 
 class EtcdPromise
